@@ -1,6 +1,6 @@
 # Algoritmo Quicksort
 
-Acesse o link do projeto: https://henriquesoriano.github.io/Algoritmo-Quicksort
+Acesse o link do projeto: <a target="_blank">https://henriquesoriano.github.io/Algoritmo-Quicksort</a>
 
 ### Projeto desenvolvido em JavaScript para execução e viualização do algoritmo Quicksort
 
