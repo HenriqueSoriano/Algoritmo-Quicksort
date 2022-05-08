@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+
+        <title>QUICKSORT - Henrique Soriano Landes</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/addons/p5.sound.min.js"></script>
+
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;600;700&family=Roboto:wght@300;400;700&display=swap');
+        </style>
+
+        <meta charset="utf-8" />
+
+    </head>
+
+    <body>
+        
+        <header class="cabecalho">
+            <div class="titulos">
+                <a href="index.html">
+                    <h1 class="titulo">Algoritmo Quicksort</h1>
+                    <h2 class="subtitulo">Henrique Soriano Landes</h2>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://github.com/HenriqueSoriano" target=”_blank”>
+                            <svg version="1.0" viewBox="0 0 32 32">
+                                <path d="M16.003 0C7.17 0 .008 7.162.008 15.997c0 7.067 4.582 13.063 10.94 15.179.8.146 1.052-.328 1.052-.752 0-.38.008-1.442 0-2.777-4.449.967-5.371-2.107-5.371-2.107-.727-1.848-1.775-2.34-1.775-2.34-1.452-.992.109-.973.109-.973 1.605.113 2.451 1.649 2.451 1.649 1.427 2.443 3.743 1.737 4.654 1.329.146-1.034.56-1.739 1.017-2.139-3.552-.404-7.286-1.776-7.286-7.906 0-1.747.623-3.174 1.646-4.292-.165-.404-.715-2.031.157-4.234 0 0 1.343-.43 4.398 1.641a15.31 15.31 0 0 1 4.005-.538c1.359.006 2.727.183 4.005.538 3.055-2.07 4.396-1.641 4.396-1.641.872 2.203.323 3.83.159 4.234 1.023 1.118 1.644 2.545 1.644 4.292 0 6.146-3.74 7.498-7.304 7.893C19.479 23.548 20 24.508 20 26v4.428c0 .428.258.901 1.07.746C27.422 29.055 32 23.062 32 15.997 32 7.162 24.838 0 16.003 0z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/henrique-soriano-b6b623226/" target=”_blank”>
+                            <svg viewBox="0 0 512 512" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2">
+                                <path d="M256 0c141.29 0 256 114.71 256 256 0 141.29-114.71 256-256 256C114.71 512 0 397.29 0 256 0 114.71 114.71 0 256 0Zm-80.037 399.871V199.95h-66.464v199.921h66.464Zm239.62 0V285.225c0-61.409-32.787-89.976-76.509-89.976-35.255 0-51.047 19.389-59.889 33.007V199.95h-66.447c.881 18.757 0 199.921 0 199.921h66.446v-111.65c0-5.976.43-11.95 2.191-16.221 4.795-11.935 15.737-24.299 34.095-24.299 24.034 0 33.663 18.34 33.663 45.204v106.966h66.45ZM143.18 103.55c-22.74 0-37.597 14.95-37.597 34.545 0 19.182 14.405 34.544 36.717 34.544h.429c23.175 0 37.6-15.362 37.6-34.544-.43-19.595-14.424-34.545-37.149-34.545Z" fill="#151b25" class="fill-000000"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:sorianol.henrique@gmail.com?subject=Hello%20again" target=”_blank”>
+                            <svg preserveAspectRatio="xMidYMid" viewBox="0 0 512 512">
+                                <path d="M256 512C114.615 512 0 397.385 0 256S114.615 0 256 0s256 114.615 256 256-114.615 256-256 256ZM108.159 344.493l83.16-78.662-83.16-68.829v147.491Zm295.68-196.655h-295.68v29.499l147.84 127.825 147.84-127.825v-29.499Zm0 49.164-83.16 68.829 83.16 78.662V197.002Zm-92.4 78.661-55.44 49.164-55.44-49.164-92.4 88.495h295.68l-92.4-88.495Z" fill="#151b25" fill-rule="evenodd" class="fill-000000"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+            <script src="backend.js"></script>
+
+        <footer class="rodape">
+            <div class="valores">
+                <div class="quantidade">
+                    <h6 class="quantidadeTitulo">Quantidade</h6>
+                    <input type="range" min="1" max="60" class="slider" id="quant" oninput="pegaValorQuant(this.value);" onchange="pegaValorQuant(this.value);">
+                    <output id="outQuant">30</output>
+                </div>
+                <div class="velocidade">
+                    <h6 class="velocidadeTitulo">Delay(ms)</h6>
+                    <input type="range" min="1" max="100" value="50" class="slider" id="vel" oninput="pegaValorVel(this.value)" onchange="pegaValorVel(this.value)">
+                    <output id="outVel">50</output>
+                </div>
+            </div>
+            <div class="botoes">
+                <button id="botaoNovoArray" onclick="gerador(largura)">NOVOS VALORES</button>
+                <button id="botaoQuicksort" onclick="callQuicksort(valores, 0, valores.length - 1);">QUICKSORT</button>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

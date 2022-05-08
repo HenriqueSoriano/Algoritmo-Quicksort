@@ -1,0 +1,209 @@
+:root {
+    --margin: 60px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F1F8F0;
+    font-family: 'Radio Canada', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+ul li {
+    display: inline;
+    margin-left: 1.75rem;
+}
+
+ul {
+    margin-top: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+svg {
+    width: 40px;
+    transition: .25s;
+    fill: #151b25;
+    transition: .25s;
+}
+
+svg:hover path {
+    fill: #004369;
+    transition: .25s;
+}
+
+.cabecalho {
+    width: var(--margin);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 2%;
+    align-items: center;
+}
+
+.titulo {
+    color: #151B25;
+}
+
+.subtitulo {
+    color: #151b25e9;
+} 
+
+.titulo {
+    margin-top: 1.6rem;
+    margin-bottom: 0rem;
+}
+
+.subtitulo {
+    margin-top: .75rem;
+    font-size: 1.35rem;
+}
+
+ul {
+    list-style: none;
+}
+
+canvas {
+    display: block;
+    border-radius: .3rem;
+}
+
+.botoes {
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rodape {
+    position: absolute;
+    bottom: 0;
+    
+    width: var(--margin);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#botaoQuicksort {
+    margin-left: 2rem;
+    height: 40px;
+    width: 16rem;
+    border-style: none;
+    background-color: #151B25;
+    color: #F1F8F0;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .25s;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+#botaoQuicksort:hover {
+    background-color: #F1F8F0;
+    color: #151B25;
+    border: 1px solid #151B25;
+    border-radius: 8px;
+    transition: .25s;
+}
+
+#botaoNovoArray {
+    height: 40px;
+    width: 16rem    ;
+    background-color: #F1F8F0;
+    border: 1px solid #151B25;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #151B25;
+    outline: none;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .25s;
+    font-family: 'Radio Canada', sans-serif;
+}
+
+#botaoNovoArray:hover {
+    border-style: none;
+    background-color: #151B25;
+    color: #F1F8F0;
+    transition: .25s;
+}
+
+#quant {
+    direction: rtl
+}
+
+.slider {
+    margin-right: 3rem;
+    -webkit-appearance: none;
+    width: 15rem;
+    height: .8rem;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: .8rem;
+    height: .8rem;
+    background: #004369;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #004369;
+    cursor: pointer;
+}
+
+.valores {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.quantidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: .1rem;
+}
+
+.velocidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: .1rem;
+}
+
+.velocidadeTitulo, .quantidadeTitulo {
+    margin-right: 3rem;
+    margin-left: 0rem;
+    margin-top: 0rem;
+    margin-bottom: .75rem;
+    font-size: 1rem;
+    color: #18274292;
+}
+
+#outQuant, #outVel {
+    margin-right: 3rem;
+    margin-left: 0rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    font-size: 1rem;
+    color: #18274292;
+}
